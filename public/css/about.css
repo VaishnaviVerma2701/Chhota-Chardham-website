@@ -1,0 +1,28 @@
+/* navbar */
+#navbar h2 {
+    text-align: center;
+    padding: 2px 2px;
+}
+
+#navbar p {
+    text-align: center;
+    padding: 16px 2px;
+}
+
+#place1 h2 {
+    margin-left: 42px;
+}
+
+#place1 img {
+    height: 150px;
+    margin-left: 23px;
+}
+
+#place2 h2 {
+    margin-left: 42px;
+}
+
+#place2 img {
+    height: 150px;
+    margin-left: 23px;
+}

@@ -1,0 +1,255 @@
+* {
+   margin: 0px;
+   padding: 0px;
+}
+
+/* left section  */
+.left {
+   /* border: 2px solid red; */
+   display: inline-block;
+   position: absolute;
+   left: 11px;
+   top: 7px;
+
+}
+
+.left img {
+   width: 55px;
+   /* color will change */
+   /* filter: invert();  */
+}
+
+.left div {
+   line-height: 7px;
+   font-size: 15px;
+   color: black;
+}
+
+.right {
+   position: absolute;
+   right: 34px;
+   top: 40px;
+   display: inline-block;
+   /* position: fixed; */
+   /* border: 2px solid rgb(237, 230, 105); */
+
+
+}
+
+.bt {
+   font-size: 10px;
+   border-radius: 12px;
+   background-color: #000056;
+   color: white;
+   padding: 3px 8px;
+}
+
+.bt:hover {
+   background-color: red;
+   color: white;
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+:root {
+   --navbar-hight: 59px;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+
+
+/* mid section  */
+
+.mid {
+   /* for center condition */
+   display: block;
+   width: 63%;
+   margin: 49px auto;
+}
+
+#navbar {
+   display: flex;
+   position: fixed;
+   top: 60px;
+   font-size: 25px;
+}
+
+#navbar li {
+   display: inline-block;
+
+}
+
+#navbar li a {
+   display: block;
+   color: black;
+   padding: 3px -15px;
+   text-decoration: none;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   margin: 20px 18px;
+
+}
+
+#navbar li a:hover {
+   color: red;
+   /* background-color: aliceblue; */
+   text-decoration: underline;
+}
+
+#Home {
+   display: flex;
+   flex-direction: column;
+   padding: 76px 183px;
+   height: 377px;
+   align-items: center;
+   justify-content: center;
+}
+
+#Home::before {
+   content: "";
+   background: url('../CD/bg4.png') no-repeat center center/cover;
+   position: absolute;
+   /* position: fixed; */
+   width: 100%;
+   height: 614px;
+   /*53%*/
+   top: 0px;
+   left: 0px;
+   z-index: -1;
+   opacity: .8;
+}
+
+#Home h2 {
+   margin-top: -65px;
+   padding: 40px 2px;
+   color: black;
+   justify-content: center;
+   align-items: center;
+
+}
+
+#Home p {
+   font-size: 16px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   color: black;
+}
+
+#Home a {
+   text-decoration: none;
+   padding: 5px 0px;
+   margin: -56px 0px;
+}
+
+
+.btn {
+   margin: 0px;
+   padding: 3px 19px;
+   font-size: 20px;
+   border-radius: 16px;
+   cursor: pointer;
+   background-color: #000056;
+   color: white;
+   text-decoration: none;
+}
+
+.btn:hover {
+   background-color: red;
+   text-decoration: underline;
+   color: aliceblue;
+}
+
+.btn2 {
+   margin: 20px;
+   padding: 3px 19px;
+   font-size: 20px;
+   border-radius: 16px;
+   cursor: pointer;
+   background-color: #000056;
+   color: white;
+   text-decoration: none;
+}
+
+.btn2:hover {
+   background-color: red;
+   text-decoration: underline;
+   color: aliceblue;
+}
+
+h4 {
+   font-size: 33px;
+   color: white;
+   background-color:#34343c;
+   font-family: 'IBM Plex Sans', sans-serif;
+   text-align: center;
+}
+
+
+#About h2 {
+   text-align: center;
+   margin-top: 106px;
+}
+
+#About p {
+   text-align: center;
+   padding: 25px 3px;
+   font-size: 16px;
+}
+
+/* SERVICE SECTION  */
+#service {
+   display: flex;
+   margin: 5px;
+   height: 400px;
+}
+
+#service-container h3 {
+   margin-top: 7px;
+   text-align: center;
+   font-size: 26px;
+}
+
+#service .box {
+   /* border: 2px solid black; */
+   padding: 3px;
+   margin: 22px 15px;
+   /*-10 16*/
+   border-radius: 10px;
+   top: 20px;
+   margin-bottom: 20px;
+   height: 110px;
+}
+
+#service .box h2 {
+   text-align: center;
+   margin-left: 3px;
+}
+
+#service .box img {
+   width: 200px;
+   height: 112px;
+   display: block;
+   margin: auto;
+   border-radius: 15px;
+   cursor: pointer;
+   opacity: .9;
+   display: cover;
+
+}
+
+#service .box img:hover {
+   /* height: 112px; */
+   border-radius: 30px;
+   border: 2px solid red;
+}
+
+#service .box p {
+   text-align: center;
+   color: black;
+   font-size: 13px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   margin-top: 15px;
+   margin-bottom: 23px;
+
+}

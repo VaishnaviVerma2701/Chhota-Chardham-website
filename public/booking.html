@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking</title>
+</head>
+
+
+<style>
+   body{
+    margin: 0px;
+    padding: 0px;
+    background: no-repeat;
+    background-size:cover;
+    background: url('CD/hotal.jpg') no-repeat center center/cover;
+    opacity:.9;
+ } 
+ 
+ h2{
+    color: white;
+    text-align: center;
+    
+ }
+    .container {
+        display: inline-block;
+        border: 2px solid white;
+
+        margin: 0px 60px;
+        padding: 21px 34px;
+        width: 31%;
+        border-radius: 35px;
+        text-align: center;
+        /* display: inline; */
+    }
+    .container h3{
+        text-align: center;
+        color: white;
+        align-items: center;
+        justify-content: center;
+    }
+    .container1 h3{
+        text-align: center;
+        color: white;
+        align-items: center;
+        justify-content: center;
+    }
+    .container1 {
+        display: inline-block;
+        border: 2px solid white;
+        margin: 37px 60px;
+        padding: 30px 32px;
+        width: 31%;
+        border-radius: 35px;
+        text-align: center;
+        right: 44px;
+    }
+    .container1 h3{
+        text-align: center;
+    }
+
+ form label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 4px;
+    text-align: center;
+    width: 59px;
+    color:gold;
+ }
+ form input{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+</style>
+<body>
+<h2>THIS IS MY  HOTAL BOOKING SITE </h2>
+<div class="container">
+    <h3> Parsonal detail</h3>
+    <form action="/booking" method="POST">
+        <div>
+             <label for="name">Name</label>
+            <input type="text" name="myname" id="name">
+        </div>
+        <br>
+        <div>
+            <label for="number">number</label>
+            <input type="text" name="mynumber" id="number">
+        </div>
+       <br>
+        <div>
+            <label for="address">address</label>
+            <input type="text" name="myaddress" id="address">
+        </div>
+        <br>
+        <div>
+            <label for="gender">gender</label>
+              male <input type="radio" name="mygender">female <input type="radio" name="mygender">other<input
+                type="radio" name="mygender">
+        </div>
+        <br>
+            <button class="btn">submit</button>
+            </form>
+        </div>
+    <div class="container1">
+        <h3> Hotels detals</h3>
+        <form action="/booking/hotel" method="Post">
+            <div>
+             <label for="name"> Hotals Name</label>
+             <select name="myhotal" id="name">
+                <option value="ramraj"> ramraj hotal</option>
+                <option value="shiv prashad"> shivprashad hotal</option>
+                <option value="cks"> cks hotal</option>
+                <option value="team"> team hotal</option>
+              </select>
+            </div>
+            <br>
+            <div>
+                <label for="room number"> room number</label>
+                <input type="text" name="roomnumber" id="room number">
+            </div>
+           <br>
+            <div>
+                <label for="days">num of days</label>
+                <input type="text" name="days" id="days">
+            </div>
+            <br>
+        <div>
+            <label for="roomtype">room type</label>
+              duplex <input type="radio" name="myroom">genral <input type="radio" name="myroom">hafldulpex<input
+                type="radio" name="myroom">        
+        </div>
+        <button class="btn">submit</button>
+    </form>
+  </div>
+</body>
+</html>

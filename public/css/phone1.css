@@ -1,0 +1,51 @@
+/* navbar section  */
+#navbar{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#navbar::before{
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+#navbar ul li a {
+    overflow: hidden;
+    font-size: 10px;
+    margin: 4px 8px;
+   
+}
+/* home section  */
+#Home a {
+    display: block;
+    text-decoration: none;
+    padding: -1px 44px;
+    margin: -49px -47px;
+    margin-left: 104px;
+}
+#Home::before{
+   
+height: 670px; /*53%*/
+
+ }
+/* about section  */
+/* service-container */
+#service{
+    flex-direction: column;
+    margin-top: -17px;
+
+}
+#service .box{
+    padding: 4px 4px;
+    margin: 57px 2px;
+}
+#service .box p{
+    padding: 4px 4px;
+    /* margin-bottom: 12px; */
+    margin-top: 8px;
+}
+#service .box img{
+   width: 166px;
+   /* margin-left: -10px; */
+}
