@@ -16,30 +16,30 @@ const app = express();
 const port = 2000;
 // require("./db/conn.js");
 
-const static_path =path.join(__dirname, "../public");
+const static_path =path.join(__dirname, "../");
 app.use(express.static(static_path));
 
 
 // This route will serve the chardham.html file as the starting page
 app.get("/", (req, res) => {
-  const chardhamPath = path.join(__dirname, "../public/chardham.html");
+  const chardhamPath = path.join(__dirname, "../index.html");
   res.sendFile(chardhamPath);
 });
 
 // This route will serve the register.html file
 app.get("/register", (req, res) => {
-  const registerPath = path.join(__dirname, "../public/register.html");
+  const registerPath = path.join(__dirname, "../register.html");
   res.sendFile(registerPath);
 });
 
 // Serve booking.html
 app.get("/booking", (req, res) => {
-  const bookingPath = path.join(__dirname, "../public/booking.html");
+  const bookingPath = path.join(__dirname, "../booking.html");
   res.sendFile(bookingPath);
 });
 
 app.get("/booking/hotel", (req, res) => {
-  const bookingPath = path.join(__dirname, "../public/booking.html");
+  const bookingPath = path.join(__dirname, "../booking.html");
   res.sendFile(bookingPath);
 });
 
@@ -193,9 +193,9 @@ app.post("/login", async (req, res) => {
       res.status(500).send("Error during login: " + error.message);
   }
 });
-app.get("/chardham", (req, res) => {
+app.get("/index", (req, res) => {
   //res.send("Welcome to the dashboard!");
-  const bookingPath = path.join(__dirname, "../public/chardham.html");
+  const bookingPath = path.join(__dirname, "../index.html");
   res.sendFile(bookingPath);
 });
 
