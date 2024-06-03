@@ -1,134 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>booking</title>
-</head>
-
-
-<style>
-   body{
-    margin: 0px;
-    padding: 0px;
-    background: no-repeat;
-    background-size:cover;
-    background: url('CD/hotal.jpg') no-repeat center center/cover;
-    opacity:.9;
- } 
- 
- h2{
-    color: white;
-    text-align: center;
-    
- }
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forms</title>
+  <style>
+    body {
+      background: url("CD/hotel.jpg") no-repeat center center fixed;
+      font-family: Arial, sans-serif;
+      background-size: cover;
+    }
     .container {
-        display: inline-block;
-        border: 2px solid white;
-
-        margin: 0px 60px;
-        padding: 21px 34px;
-        width: 31%;
-        border-radius: 35px;
-        text-align: center;
-        /* display: inline; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 20px;
+      padding: 20px;
     }
-    .container h3{
-        text-align: center;
-        color: white;
-        align-items: center;
-        justify-content: center;
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    .container1 h3{
-        text-align: center;
-        color: white;
-        align-items: center;
-        justify-content: center;
+    .btn, .btn2 {
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 8px;
+      padding: 10px 20px;
+      border: none;
+      margin-top: 10px;
+      display: inline-block;
     }
-    .container1 {
-        display: inline-block;
-        border: 2px solid white;
-        margin: 37px 60px;
-        padding: 30px 32px;
-        width: 31%;
-        border-radius: 35px;
-        text-align: center;
-        right: 44px;
+    .btn {
+      background-color: #7a7ae8;
     }
-    .container1 h3{
-        text-align: center;
+    .btn:hover {
+      background-color: red;
     }
-
- form label{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 4px;
-    text-align: center;
-    width: 59px;
-    color:gold;
- }
- form input{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
- }
-</style>
+    .btn2 {
+      background-color: rgb(74, 156, 227);
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
 <body>
-<h2>THIS IS MY  HOTAL BOOKING SITE </h2>
-<div class="container">
-    <h3> Parsonal detail</h3>
+  <a href="./admin.html"><button class="btn2">Admin login</button></a>
+  <div class="container">
     <form action="/booking" method="POST">
-        <div>
-             <label for="name">Name</label>
-            <input type="text" name="myname" id="name">
+      <h2>Welcome to booking page</h2>
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div class="form-group">
+          <label for="myName">Name:</label>
+          <input type="text" id="myName" name="myName" required />
         </div>
-        <br>
-        <div>
-            <label for="number">number</label>
-            <input type="text" name="mynumber" id="number">
+        <div class="form-group">
+          <label for="myNumber">Mob. no:</label>
+          <input type="text" id="myNumber" name="myNumber" pattern="\d{10}" required title="Please enter a valid 10-digit phone number." />
         </div>
-       <br>
-        <div>
-            <label for="address">address</label>
-            <input type="text" name="myaddress" id="address">
+        <div class="form-group">
+          <label for="myEmail">Email:</label>
+          <input type="email" id="myEmail" name="myEmail" required />
         </div>
-        <br>
-        <div>
-            <label for="gender">gender</label>
-              male <input type="radio" name="mygender">female <input type="radio" name="mygender">other<input
-                type="radio" name="mygender">
+        <div class="form-group">
+          <label>Gender:</label>
+          <label><input type="radio" name="myGender" value="Male" required /> Male</label>
+          <label><input type="radio" name="myGender" value="Female" required /> Female</label>
+          <label><input type="radio" name="myGender" value="Other" required /> Other</label>
         </div>
-        <br>
-            <button class="btn">submit</button>
-            </form>
+        <div class="form-group">
+          <label for="myAddress">Address:</label>
+          <input type="text" id="myAddress" name="myAddress" required />
         </div>
-    <div class="container1">
-        <h3> Hotels detals</h3>
-        <form action="/booking/hotel" method="Post">
-            <div>
-             <label for="name"> Hotals Name</label>
-             <select name="myhotal" id="name">
-                <option value="ramraj"> ramraj hotal</option>
-                <option value="shiv prashad"> shivprashad hotal</option>
-                <option value="cks"> cks hotal</option>
-                <option value="team"> team hotal</option>
-              </select>
-            </div>
-            <br>
-            <div>
-                <label for="room number"> room number</label>
-                <input type="text" name="roomnumber" id="room number">
-            </div>
-           <br>
-            <div>
-                <label for="days">num of days</label>
-                <input type="text" name="days" id="days">
-            </div>
-            <br>
-        <div>
-            <label for="roomtype">room type</label>
-              duplex <input type="radio" name="myroom">genral <input type="radio" name="myroom">hafldulpex<input
-                type="radio" name="myroom">        
+      </fieldset>
+      <fieldset>
+        <legend>Booking Information</legend>
+        <div class="form-group">
+          <label for="hotelName">Hotels Name:</label>
+          <select name="hotelName" id="hotelName" required>
+            <option value="The Kumaon">The Kumaon</option>
+            <option value="Hotel Queen">Hotel Queen</option>
+            <option value="Hotel Tourist Empire">Hotel Tourist Empire</option>
+            <option value="Hotel Galaxy">Hotel Galaxy</option>
+          </select>
         </div>
-        <button class="btn">submit</button>
+        <div class="form-group">
+          <label for="roomRent">Room Rent:</label>
+          <select name="roomRent" id="roomRent" required>
+            <option value="AC">AC room: Rs 1000</option>
+            <option value="Non-AC">Non-AC: Rs 800</option>
+            <option value="General">General: Rs 500</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="myDate">Date:</label>
+          <input type="date" id="myDate" name="myDate" required />
+        </div>
+        <div class="form-group">
+          <label for="myDays">Days:</label>
+          <input type="number" id="myDays" name="myDays" min="1" required />
+        </div>
+        <div class="form-group">
+          <label for="familyMembers">No. of family members:</label>
+          <input type="number" id="familyMembers" name="familyMembers" min="1" required />
+        </div>
+        <div class="form-group">
+          <label for="paymentMethod">Payment Method:</label>
+          <select name="paymentMethod" id="paymentMethod" required>
+            <option value="Online">Online Payment</option>
+            <option value="Offline">Offline Payment</option>
+          </select>
+        </div>
+      </fieldset>
+      <div class="form-group">
+        <button class="btn" type="submit">Submit</button>
+        <a href="/payment.html" class="btn2">Online Payment</a>
+      </div>
     </form>
   </div>
 </body>

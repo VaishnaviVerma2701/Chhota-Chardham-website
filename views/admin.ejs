@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Admin panel or details of all users</h1>
+    <h2>Registered Users</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Gender</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% registers.forEach(register => { %>
+                <tr>
+                    <td><%= register.myname %></td>
+                    <td><%= register.mynumber %></td>
+                    <td><%= register.mygender %></td>
+                    <td><%= register.myemail %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <h2>Booking Details</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Hotel Name</th>
+                <th>Room Rent</th>
+                <th>Date</th>
+                <th>Days</th>
+                <th>Family Members</th>
+                <th>Payment Method</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% bookings.forEach(booking => { %>
+                <tr>
+                    <td><%= booking.myName %></td>
+                    <td><%= booking.myNumber %></td>
+                    <td><%= booking.myEmail %></td>
+                    <td><%= booking.myGender %></td>
+                    <td><%= booking.myAddress %></td>
+                    <td><%= booking.hotelName %></td>
+                    <td><%= booking.roomRent %></td>
+                    <td><%= booking.myDate %></td>
+                    <td><%= booking.myDays %></td>
+                    <td><%= booking.familyMembers %></td>
+                    <td><%= booking.paymentMethod %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
