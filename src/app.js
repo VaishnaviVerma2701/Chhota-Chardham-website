@@ -55,6 +55,17 @@ const bookingSchema = new mongoose.Schema({
 // Create a model for booking
 const Booking = mongoose.model("Booking", bookingSchema);
 
+const feedbackSchema = new mongoose.Schema({
+  myname: String,
+  myphone: Number,
+  myemail: String,
+  myAddress: String,
+  mytext: String,
+});
+
+// Create a model for register
+const feedback = mongoose.model("feedback", feedbackSchema);
+
 // Routes
 app.get("/", (req, res) => {
   const indexPath = path.join(__dirname, "../index.html");
@@ -135,6 +146,31 @@ app.post("/booking", async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).send("Error during booking");
+  }
+});
+
+app.post("/", async (req, res) => {
+  try {
+    const {
+      myname,
+      myphone,
+      myemail,
+      myaddress,
+      mytext,
+    } = req.body;
+    const feed = new feedback({
+      myname,
+      myphone,
+      myemail,    
+      myaddress,
+      mytext,
+      
+    });
+    await feed.save();
+    res.send("feedback successful");
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error during feedback");
   }
 });
 
