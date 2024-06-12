@@ -23,7 +23,7 @@
         </ul>
         <div class="rightNav v-class-resp">
             <input type="text" name="Search" id="search">
-            <button class="btn btn-sm">Search</button>
+            <button class="btn btn-sm" onclick="searchGoogle()">Search</button>
         </div>
         <div class="burger">
             <div class="line"></div>
@@ -159,5 +159,12 @@
 </p>
 </footer>
 <script src="js/resp.js"></script>
+<script>
+    function searchGoogle() {
+            var query = document.getElementById('search').value;
+            var url = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            window.location.href = url;
+        }
+</script>
 </body>
 </html>
